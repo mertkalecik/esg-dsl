@@ -33,9 +33,9 @@ Domain Specific Language for ESGs
 # Sample
 On the root of project you can find following samples.
 
-For Simple ESG: simple_esg.mkdsl  --> Output: simple_esg.json
-For Refined ESG: refined_esg.mkdsl  --> Output: refined_esg.json
-For Simple ESG: decision_table.mkdsl  --> Output: decision_table.json
+* For Simple ESG: simple_esg.mkdsl  --> Output: simple_esg.json
+* For Refined ESG: refined_esg.mkdsl  --> Output: refined_esg.json
+* For Simple ESG: decision_table.mkdsl  --> Output: decision_table.json
 
 ## Authors
 Mert Kalecik
