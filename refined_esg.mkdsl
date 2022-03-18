@@ -1,0 +1,169 @@
+ESG "0"
+	ESG "1" Event "Login"
+		Vertex
+		ID "1"
+		Event "User name Entered",
+	 
+		Vertex
+		ID "2"
+		Event "Password Entered",
+		
+		Vertex
+		ID "3"
+		Event "Show Error",
+		
+		Vertex
+		ID "4"
+		Event "Login Successful"
+			
+		Edge "1"
+		Source 1
+		Target 3,
+		
+		Edge "2"
+		Source 1
+		Target 2,
+		
+		Edge "3"
+		Source 2
+		Target 3,
+		
+		Edge "4"
+		Source 2
+		Target 4,
+	 
+	ESG "2" Event "Withdraw"
+		Vertex
+		ID "1"
+		Event "Withdraw Amount Entered",
+	 
+		Vertex 
+		ID "2"
+		Event "Amount Confirmed",
+		
+		Vertex
+		ID "3"
+		Event "Show Error",
+		
+		Vertex 
+		ID "4"
+		Event "Withdraw Successful"
+			
+		Edge "1"
+		Source 1
+		Target 2,
+		
+		Edge "2"
+		Source 2
+		Target 3,
+		
+		Edge "3"
+		Source 2
+		Target 4,
+		
+	ESG "3" Event "Deposit"
+		Vertex
+		ID "1"
+		Event "Money Entered",
+	 
+		Vertex 
+		ID "2"
+		Event "Amount Confirmed",
+		
+		Vertex 
+		ID "3"
+		Event "Show Error",
+		
+		ESG "4" Event "I"
+			Vertex
+			ID "1"
+			Event "I1",
+		 
+			Vertex 
+			ID "2"
+			Event "I2",
+			
+			Vertex
+			ID "3"
+			Event "I3",
+			
+			Vertex 
+			ID "4"
+			Event "I4"
+				
+			Edge "1"
+			Source 1
+			Target 2,
+			
+			Edge "2"
+			Source 2
+			Target 3,
+			
+			Edge "3"
+			Source 2
+			Target 4
+			
+		Edge "1"
+		Source 1
+		Target 2,
+		
+		Edge "2"
+		Source 1
+		Target 3,
+		
+		Edge "3"
+		Source 2
+		Target 3,
+		
+		Edge "4"
+		Source 2
+		Target 4,
+		
+	Vertex
+	ID "4"
+	Event "OTP Verified",
+		
+	ESG "5" Event "Send Bill"
+		Vertex
+		ID "1"
+		Event "Bill Requested",
+	 
+		Vertex 
+		ID "2"
+		Event "SMS sent",
+		
+		Vertex 
+		ID "3"
+		Event "E-mail sent"
+			
+		Edge "1"
+		Source 1
+		Target 2,
+		
+		Edge "2"
+		Source 1
+		Target 3,
+		
+		Edge "3"
+		Source 2
+		Target 4
+		
+	Edge "1"
+	Source 1
+	Target 2,
+	
+	Edge "2"
+	Source 1
+	Target 3,
+	
+	Edge "3"
+	Source 2
+	Target 4,
+	
+	Edge "4"
+	Source 3
+	Target 4,
+	
+	Edge "5"
+	Source 4
+	Target 5

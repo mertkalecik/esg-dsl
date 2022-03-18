@@ -1,0 +1,231 @@
+ESG "0"
+	ESG "1" Event "Login"
+		Vertex
+		ID "1"
+		Event "User name Entered"
+		Color red,
+	 
+		Vertex
+		ID "2"
+		Event "Password Entered"
+		DT "Password Table"
+			ID 1
+			Condition 0
+			("password is type of string"),
+				
+			Condition 1
+			("password length" >= 10) AND ("password length" < 100),
+				
+			Condition 2
+			("password should have upper case") AND ("password should have lower case"),
+			
+			Condition 3
+			("password should have special character") OR ("password should contain number")
+					
+			Action A0
+			ID "0"
+			event 1,
+				
+			Action A1
+			ID "1"
+			event 4,
+				
+			Action A2
+			ID "2"
+			event 3	
+				
+			Rule "Password Rule 1"
+			ID 1
+			value "TFFT"
+			variables
+				var "password" value "kalecik95"	
+			actions A0, A2,
+			
+			Rule "Password Rule 2"
+			ID 2
+			value "TTTT"
+			variables 
+				var "password" value "Mkalecik95?"
+			actions A1,
+		
+		Vertex
+		ID "3"
+		Event "Show Error",
+		
+		Vertex
+		ID "4"
+		Event "Login Successful"
+			
+		Edge "1"
+		Source 1
+		Target 3,
+		
+		Edge "2"
+		Source 1
+		Target 2,
+		
+		Edge "3"
+		Source 2
+		Target 3,
+		
+		Edge "4"
+		Source 2
+		Target 4,
+		
+		Edge "5"
+		Source 3
+		Target 5,
+	 
+	ESG "2" Event "Withdraw"
+		Vertex
+		ID "1"
+		Event "Withdraw Amount Entered",
+	 
+		Vertex 
+		ID "2"
+		Event "Amount Confirmed",
+		
+		Vertex
+		ID "3"
+		Event "Show Error",
+		
+		Vertex 
+		ID "4"
+		Event "Withdraw Successful"
+			
+		Edge "1"
+		Source 1
+		Target 2,
+		
+		Edge "2"
+		Source 2
+		Target 3,
+		
+		Edge "3"
+		Source 2
+		Target 1,
+		
+		Edge "4"
+		Source 2
+		Target 4,
+		
+		Edge "5"
+		Source 3
+		Target 5,
+		
+	ESG "3" Event "Set Balance"
+		Vertex
+		ID "1"
+		Event "Money Entered",
+	 
+		Vertex 
+		ID "2"
+		Event "Amount Confirmed",
+		
+		Vertex 
+		ID "3"
+		Event "Show Error",
+		
+		ESG "4" Event "Deposit"
+			Vertex
+			ID "1"
+			Event "SMS Sent",
+		 
+			Vertex 
+			ID "2"
+			Event "Balance Updated",
+			
+			Vertex
+			ID "3"
+			Event "Card Ejected"
+			
+			Edge "1"
+			Source 1
+			Target 2,
+			
+			Edge "2"
+			Source 2
+			Target 3
+			
+		Edge "1"
+		Source 1
+		Target 2,
+		
+		Edge "2"
+		Source 1
+		Target 3,
+		
+		Edge "3"
+		Source 2
+		Target 3,
+		
+		Edge "4"
+		Source 2
+		Target 1,
+		
+		Edge "5"
+		Source 2
+		Target 4,
+		
+		Edge "6"
+		Source 3
+		Target 5,
+		
+	Vertex
+	ID "4"
+	Event "OTP Verified",
+	
+	ESG "5" Event "Send Bill"
+		Vertex
+		ID "1"
+		Event "Bill Requested",
+	 
+		Vertex 
+		ID "2"
+		Event "SMS sent",
+		
+		Vertex 
+		ID "3"
+		Event "E-mail sent"
+			
+		Edge "1"
+		Source 1
+		Target 2,
+		
+		Edge "2"
+		Source 1
+		Target 3,
+		
+		Edge "3"
+		Source 2
+		Target 4
+		
+	Edge "1"
+	Source 1
+	Target 2
+	Color red,
+	
+	Edge "2"
+	Source 1
+	Target 3
+	Color blue,
+	
+	Edge "3"
+	Source 2
+	Target 4
+	Color green,
+	
+	Edge "4"
+	Source 3
+	Target 4
+	Color orange,
+	
+	Edge "5"
+	Source 4
+	Target 5
+	Color red
+	
+
+
+ 	
+

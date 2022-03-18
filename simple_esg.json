@@ -1,0 +1,77 @@
+{
+	"ID": 0,
+	"name":"refinedESG",
+	"vertices":[
+		{
+			"ID": 0,
+			"event":"["
+		},
+		{
+			"ID": 1,
+			"event":"a",
+			"isRefinedVertex" : false,
+			"color": "black"
+		},
+		{
+			"ID": 2,
+			"event":"b",
+			"isRefinedVertex" : false,
+			"color": "black"
+		},
+		{
+			"ID": 3,
+			"event":"c",
+			"isRefinedVertex" : false,
+			"color": "black"
+		},
+		{
+			"ID": 4,
+			"event":"d",
+			"isRefinedVertex" : false,
+			"color": "black"
+		}
+		
+		,{
+			"ID": 5,
+			"event":"]"
+		}
+		],
+		"edges":[
+		{
+			"ID": 0,
+			"source": 0,
+			"target": 1,
+			"color":"black"			
+		},
+		{
+			"ID": 1,
+			"source": 1,
+			"target": 2,
+			"color":"black"			
+		},
+		{
+			"ID": 2,
+			"source": 2,
+			"target": 3,
+			"color":"black"			
+		},
+		{
+			"ID": 3,
+			"source": 3,
+			"target": 2,
+			"color":"black"			
+		},
+		{
+			"ID": 4,
+			"source": 2,
+			"target": 4,
+			"color":"black"			
+		}
+		,{
+			"ID": 5,
+			"source": 4,
+			"target": 5,
+			"color":"black"						
+		}
+		]
+}
